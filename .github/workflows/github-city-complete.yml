@@ -1,0 +1,68 @@
+name: Complete GitHub Visualizations
+
+on:
+  schedule:
+    - cron: "0 0 * * 0"  # Weekly on Sunday
+  workflow_dispatch:
+
+jobs:
+  generate-visualizations:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      
+      # ==========================================
+      # Classic 3D Contribution Graph
+      # ==========================================
+      - name: Classic 3D Graph
+        uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+      
+      # ==========================================
+      # GitHub City (Skyline)
+      # ==========================================
+      - name: GitHub City
+        uses: lowlighter/metrics@latest
+        with:
+          filename: github-city.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: ""
+          plugin_skyline: yes
+          plugin_skyline_year: current-year
+          plugin_skyline_frames: 6
+          plugin_skyline_quality: 1
+          plugin_skyline_settings: |
+            {
+              "url": "https://honzaap.github.io/GithubCity?name=${login}&year=${year}",
+              "ready": "[...document.querySelectorAll('.display-info span')].map(span => span.innerText).includes('${login}')",
+              "wait": 4,
+              "hide": "document.querySelector('.github-corner, .footer-text').remove()"
+            }
+      
+      # ==========================================
+      # Isometric Calendar
+      # ==========================================
+      - name: Isometric Calendar
+        uses: lowlighter/metrics@latest
+        with:
+          filename: isometric-calendar.svg
+          token: ${{ secrets.GITHUB_TOKEN }}
+          base: ""
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: full-year
+      
+      # ==========================================
+      # Commit Changes
+      # ==========================================
+      - name: Commit & Push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add -A .
+          git commit -m "Updated GitHub visualizations" || echo "No changes"
+          git push
