@@ -25,6 +25,5 @@
 [![](https://visitcount.itsvg.in/api?id=Dex
 
 ## 3D Contribution Graph
-![](./profile-3d-contrib/profile-profile-night-rainbow.svg.svg)terous-Ruler&icon=0&color=0)](https://visitcount.itsvg.in)
-
+![](./profile-3d-contrib/profile-night-rainbow.svg)
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
