@@ -26,4 +26,8 @@
 
 ## 3D Contribution Graph
 ![](./profile-3d-contrib/profile-night-rainbow.svg)
+
+## My City 
+![]([https://github-contributor-stats.vercel.app/api?username=Dexterous-Ruler&limit=5&theme=dark&combine_all_yearly_contributions=true](https://honzaap.github.io/GithubCity/?name=Dexterous-Ruler&year=2025))
+
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
