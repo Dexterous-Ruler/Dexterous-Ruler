@@ -23,8 +23,18 @@
 
 ---
 
-### 🏙️ My City
-[![My GitHub City](https://github-contributor-stats.vercel.app/api?username=Dexterous-Ruler&limit=5&theme=dark&combine_all_yearly_contributions=true)](https://honzaap.github.io/GithubCity/?name=Dexterous-Ruler&year=2025)
+## 🏙️ My GitHub City (Click to Explore!)
+
+<a href="https://honzaap.github.io/GithubCity?name=Dexterous-Ruler&year=2025" target="_blank">
+  <img src="./github-city.svg" alt="GitHub City" />
+</a>
+
+*Click the image above to explore my contributions as an interactive 3D city!*
+
+---
+
+## 📅 Isometric Calendar
+![Isometric Calendar](./isometric-calendar.svg)Ruler&limit=5&theme=dark&combine_all_yearly_contributions=true)](https://honzaap.github.io/GithubCity/?name=Dexterous-Ruler&year=2025)
 [![](https://visitcount.itsvg.in/api?id=Dex
 
 ## 3D Contribution Graph
